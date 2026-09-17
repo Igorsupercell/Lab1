@@ -85,6 +85,34 @@ namespace GeneticSearch
             }
             return data;
         }
+        
+
+        static string RLDecoding(string input)
+        {
+            if (string.IsNullOrEmpty(input)) return string.Empty;
+
+            StringBuilder sb = new StringBuilder();
+
+            for (int i = 0; i < input.Length; i++)
+            {
+                if (char.IsDigit(input[i]))
+                {
+                    int count = input[i] - '0';
+                    if (i + 1 < input.Length)
+                    {
+                        char nextChar = input[i + 1];
+                        sb.Append(nextChar, count);
+                        i++;
+                    }
+                }
+                else
+                {
+                    sb.Append(input[i]);
+                }
+            }
+
+            return sb.ToString();
+        }
         static void ExecuteCommand(string command, string p1, string p2, List<Protein> proteins, StreamWriter writer, int counter)
         {
             string prefix = $"{counter} {command}";
@@ -95,7 +123,7 @@ namespace GeneticSearch
                 string searchSequence = RLDecoding(p1);
                 bool found = false;
 
-                writer.WriteLine("organism\tprotein");
+                writer.WriteLine("organism\t\t\tprotein");
 
                 foreach (var protein in proteins)
                 {
@@ -159,11 +187,11 @@ namespace GeneticSearch
                 {
                     string seq = proteins[index].CodeAminoAcid;
 
-                    var mostFrequent = seq
-                        .GroupBy(c => c)
-                        .OrderByDescending(g => g.Count())
-                        .ThenBy(g => g.Key)
-                        .FirstOrDefault();
+                    var mostFrequent = seq    
+                        .GroupBy(c => c)                     // группирует одиноковые символы вместе
+                        .OrderByDescending(g => g.Count())   // сортирует группы по убыванию их количества
+                        .ThenBy(g => g.Key)                  // сортировка по алфавиту
+                        .FirstOrDefault();                   // берет первую группу или null
 
                     writer.WriteLine("amino-acid\toccurs:");
                     if (mostFrequent != null)
@@ -172,35 +200,9 @@ namespace GeneticSearch
                     }
                 }
             }
+            else 
+            { writer.WriteLine($"Unknown command number\t{counter}"); }
         }
-
-        static string RLDecoding(string input)
-        {
-            if (string.IsNullOrEmpty(input)) return string.Empty;
-
-            StringBuilder sb = new StringBuilder();
-
-            for (int i = 0; i < input.Length; i++)
-            {
-                if (char.IsDigit(input[i]))
-                {
-                    int count = input[i] - '0';
-                    if (i + 1 < input.Length)
-                    {
-                        char nextChar = input[i + 1];
-                        sb.Append(nextChar, count);
-                        i++;
-                    }
-                }
-                else
-                {
-                    sb.Append(input[i]);
-                }
-            }
-
-            return sb.ToString();
-        }
-
         static void ProcessCommands(string inputFile, string outputFile, List<Protein> proteins)
         {
             if (!File.Exists(inputFile)) return;
@@ -232,11 +234,12 @@ namespace GeneticSearch
                 }
             }
         }
+
         static void Main(string[] args)
         {
-            const String InformationFile = "sequences.0.txt";
-            const String CommandsFile = "commands.0.txt";
-            const String ResultFile = "genedata.0.txt";
+            const String InformationFile = "sequences.2.txt";
+            const String CommandsFile = "commands.2.txt";
+            const String ResultFile = "genedata.2.txt";
 
             List<Protein> data = ReadData(InformationFile);
             ProcessCommands(CommandsFile, ResultFile, data);
