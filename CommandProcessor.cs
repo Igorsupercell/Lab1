@@ -24,15 +24,19 @@ namespace GeneticSearch
                     if (string.IsNullOrWhiteSpace(line)) continue;
 
                     string[] parts = line.Split('\t');
-                    string commandName = parts[0].Trim();
+                    if (parts.Length < 4)
+                    {
+                        string commandName = parts[0].Trim();
 
-                    string p1 = parts.Length > 1 ? parts[1].Trim() : string.Empty;
-                    string p2 = parts.Length > 2 ? parts[2].Trim() : string.Empty;
+                        string p1 = parts.Length > 1 ? parts[1].Trim() : string.Empty;
+                        string p2 = parts.Length > 2 ? parts[2].Trim() : string.Empty;
 
-                    CommandExecutor.Execute(commandName, p1, p2, proteins, writer, commandCounter);
+                        CommandExecutor.Execute(commandName, p1, p2, proteins, writer, commandCounter);
 
-                    writer.WriteLine(new string('-', 80));
-                    commandCounter++;
+                        writer.WriteLine(new string('-', 80));
+                        commandCounter++;
+                    }
+                    else writer.WriteLine("Неправильная команда");
                 }
             }
         }
