@@ -1,0 +1,14 @@
+C:\свое\Mygithub\Lab1\obj\Debug\net10.0\Lab1.GeneratedMSBuildEditorConfig.editorconfig
+C:\свое\Mygithub\Lab1\obj\Debug\net10.0\Lab1.AssemblyInfoInputs.cache
+C:\свое\Mygithub\Lab1\obj\Debug\net10.0\Lab1.AssemblyInfo.cs
+C:\свое\Mygithub\Lab1\obj\Debug\net10.0\Lab1.csproj.CoreCompileInputs.cache
+C:\свое\Mygithub\Lab1\bin\Debug\net10.0\Lab1.exe
+C:\свое\Mygithub\Lab1\bin\Debug\net10.0\Lab1.deps.json
+C:\свое\Mygithub\Lab1\bin\Debug\net10.0\Lab1.runtimeconfig.json
+C:\свое\Mygithub\Lab1\bin\Debug\net10.0\Lab1.dll
+C:\свое\Mygithub\Lab1\bin\Debug\net10.0\Lab1.pdb
+C:\свое\Mygithub\Lab1\obj\Debug\net10.0\Lab1.dll
+C:\свое\Mygithub\Lab1\obj\Debug\net10.0\refint\Lab1.dll
+C:\свое\Mygithub\Lab1\obj\Debug\net10.0\Lab1.pdb
+C:\свое\Mygithub\Lab1\obj\Debug\net10.0\Lab1.genruntimeconfig.cache
+C:\свое\Mygithub\Lab1\obj\Debug\net10.0\ref\Lab1.dll

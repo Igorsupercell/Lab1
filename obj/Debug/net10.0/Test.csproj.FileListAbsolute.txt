@@ -1,0 +1,5 @@
+C:\свое\Mygithub\Lab1\obj\Debug\net10.0\Test.csproj.AssemblyReference.cache
+C:\свое\Mygithub\Lab1\obj\Debug\net10.0\Test.GeneratedMSBuildEditorConfig.editorconfig
+C:\свое\Mygithub\Lab1\obj\Debug\net10.0\Test.AssemblyInfoInputs.cache
+C:\свое\Mygithub\Lab1\obj\Debug\net10.0\Test.AssemblyInfo.cs
+C:\свое\Mygithub\Lab1\obj\Debug\net10.0\Test.csproj.CoreCompileInputs.cache

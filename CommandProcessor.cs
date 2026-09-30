@@ -3,7 +3,7 @@ using System.IO;
 
 namespace GeneticSearch
 {
-    static class CommandProcessor
+    public static class CommandProcessor
     {
         public static void ProcessCommands(string inputFile, string outputFile, List<Protein> proteins)
         {

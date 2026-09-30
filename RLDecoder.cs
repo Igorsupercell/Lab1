@@ -2,7 +2,7 @@
 
 namespace GeneticSearch
 {
-    static class RLDecoder
+    public static class RLDecoder
     {
         public static string Decode(string input)
         {

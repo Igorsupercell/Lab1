@@ -4,7 +4,7 @@ using System.IO;
 
 namespace GeneticSearch
 {
-    static class DataReader
+    public static class DataReader
     {
         public static List<Protein> ReadData(string filename)
         {

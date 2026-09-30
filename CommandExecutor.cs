@@ -3,7 +3,7 @@
 
 namespace GeneticSearch
 {
-    static class CommandExecutor
+    public static class CommandExecutor
     {
         public static void Execute(string command, string p1, string p2,
                                    List<Protein> proteins, StreamWriter writer, int counter)
@@ -79,7 +79,7 @@ namespace GeneticSearch
                 }
                 else
                 {
-                    string seq = proteins[index].CodeAminoAcid;
+                    string seq = RLDecoder.Decode(proteins[index].CodeAminoAcid);
 
                     var mostFrequent = seq
                         .GroupBy(c => c)

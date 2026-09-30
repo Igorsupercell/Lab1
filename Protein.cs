@@ -1,6 +1,6 @@
 ﻿namespace GeneticSearch
 {
-    struct Protein
+    public struct Protein
     {
         private string protein_name;
         private string organism_name;
