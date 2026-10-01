@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("GeneticSearch.Tests")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+781795ec94a89c7df5dd0f80caf02a145f3539f5")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+3875069be742713abc9cf9ea2ee0bb59d38df211")]
 [assembly: System.Reflection.AssemblyProductAttribute("GeneticSearch.Tests")]
 [assembly: System.Reflection.AssemblyTitleAttribute("GeneticSearch.Tests")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
